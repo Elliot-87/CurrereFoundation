@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feather Alliance | Advocacy for Global Equity</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="input.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Feather Animation */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    .floating-feather {
+      animation: float 6s ease-in-out infinite;
+    }
+    /* Gradient underline */
+    .gradient-underline {
+      background: linear-gradient(90deg, #000 50%, transparent 50%);
+      background-size: 200% 3px;
+      background-repeat: no-repeat;
+      background-position: 100% 100%;
+      transition: background-position 0.5s ease;
+    }
+    .gradient-underline:hover {
+      background-position: 0 100%;
+    }
+    /* Live pulse effect */
+    @keyframes pulse {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+    }
+    .live-pulse {
+      animation: pulse 2s infinite;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased bg-white text-black">
+    <!-- Right-aligned Social Stack -->
+<div class="fixed right-6 top-1/2 transform -translate-y-1/2 z-30 hidden md:block">
+  <div class="flex flex-col items-center space-y-5">
+    <!-- Vertical Line Decoration -->
+    <div class="h-16 w-0.5 bg-gradient-to-b from-[#3a5a40] to-transparent"></div>
+    
+    <!-- Social Icons -->
+    <a href="#" class="social-icon group" aria-label="WhatsApp">
+      <div class="icon-bg bg-[#181818] border border-[#252525] group-hover:border-[#25D366]">
+        <i class="fab fa-whatsapp text-gray-400 group-hover:text-[#25D366]"></i>
+      </div>
+      <span class="social-tooltip right-tooltip">WhatsApp</span>
+    </a>
+    
+    <a href="#" class="social-icon group" aria-label="Facebook">
+      <div class="icon-bg bg-[#181818] border border-[#252525] group-hover:border-[#1877F2]">
+        <i class="fab fa-facebook-f text-gray-400 group-hover:text-[#1877F2]"></i>
+      </div>
+      <span class="social-tooltip right-tooltip">Facebook</span>
+    </a>
+    
+    <a href="#" class="social-icon group" aria-label="YouTube">
+      <div class="icon-bg bg-[#181818] border border-[#252525] group-hover:border-[#FF0000]">
+        <i class="fab fa-youtube text-gray-400 group-hover:text-[#FF0000]"></i>
+      </div>
+      <span class="social-tooltip right-tooltip">YouTube</span>
+    </a>
+    
+    <a href="#" class="social-icon group" aria-label="Twitter">
+      <div class="icon-bg bg-[#181818] border border-[#252525] group-hover:border-[#1DA1F2]">
+        <i class="fab fa-twitter text-gray-400 group-hover:text-[#1DA1F2]"></i>
+      </div>
+      <span class="social-tooltip right-tooltip">Twitter</span>
+    </a>
+    
+    <a href="#" class="social-icon group" aria-label="Instagram">
+      <div class="icon-bg bg-[#181818] border border-[#252525] group-hover:border-[#E1306C]">
+        <i class="fab fa-instagram text-gray-400 group-hover:text-[#E1306C]"></i>
+      </div>
+      <span class="social-tooltip right-tooltip">Instagram</span>
+    </a>
+    
+    <a href="#" class="social-icon group" aria-label="LinkedIn">
+      <div class="icon-bg bg-[#181818] border border-[#252525] group-hover:border-[#0A66C2]">
+        <i class="fab fa-linkedin-in text-gray-400 group-hover:text-[#0A66C2]"></i>
+      </div>
+      <span class="social-tooltip right-tooltip">LinkedIn</span>
+    </a>
+    
+    <a href="#" class="social-icon group" aria-label="Global Network">
+      <div class="icon-bg bg-[#181818] border border-[#252525] group-hover:border-[#588157]">
+        <i class="fas fa-globe-americas text-gray-400 group-hover:text-[#588157]"></i>
+      </div>
+      <span class="social-tooltip right-tooltip">Global Network</span>
+    </a>
+    
+    <!-- Vertical Line Decoration -->
+    <div class="h-16 w-0.5 bg-gradient-to-t from-[#6d597a] to-transparent"></div>
+  </div>
+</div>
+
+
+
+
+<!-- Compact Sidebar Navigation -->
+<!-- Desktop Sidebar -->
+<div class="desktop-sidebar fixed left-0 top-20 h-[calc(100vh-5rem)] z-40 hidden md:block mb-4">
+  <div class="flex flex-col items-center justify-between h-full px-2 py-6 bg-[#181818] bg-opacity-90 backdrop-blur-sm rounded-r-xl border-r border-[#252525]">
+    <!-- Top Navigation Section -->
+    <div class="flex flex-col items-center space-y-4">
+      <div class="mb-4 p-2">
+        <i class="fas fa-seedling text-2xl text-green-400"></i>
+      </div>
+      <a href="#" class="group relative p-2 text-gray-400 hover:text-white transition">
+        <i class="fas fa-home text-lg"></i>
+        <span class="sidebar-tooltip group-hover:scale-100">Home</span>
+      </a>
+      <a href="about.html" class="group relative p-2 text-gray-400 hover:text-white transition">
+        <i class="fas fa-info-circle text-lg"></i>
+        <span class="sidebar-tooltip group-hover:scale-100">About</span>
+      </a>
+      <a href="services.html" class="group relative p-2 text-gray-400 hover:text-white transition">
+        <i class="fas fa-concierge-bell text-lg"></i>
+        <span class="sidebar-tooltip group-hover:scale-100">Services</span>
+      </a>
+    </div>
+    <!-- Middle Navigation Section -->
+    <div class="flex flex-col items-center space-y-4">
+      <a href="#focus-areas" class="group relative p-2 text-gray-400 hover:text-white transition">
+        <i class="fas fa-bullseye text-lg"></i>
+        <span class="sidebar-tooltip group-hover:scale-100">Focus Areas</span>
+      </a>
+      <a href="gallery.html" class="group relative p-2 text-gray-400 hover:text-white transition">
+        <i class="fas fa-images text-lg"></i>
+        <span class="sidebar-tooltip group-hover:scale-100">Gallery</span>
+      </a>
+      <a href="#impact" class="group relative p-2 text-gray-400 hover:text-white transition">
+        <i class="fas fa-chart-line text-lg"></i>
+        <span class="sidebar-tooltip group-hover:scale-100">Our Impact</span>
+      </a>
+      <a href="team.html" class="group relative p-2 text-gray-400 hover:text-white transition">
+        <i class="fas fa-users text-lg"></i>
+        <span class="sidebar-tooltip group-hover:scale-100">Our Team</span>
+      </a>
+    </div>
+    <!-- Bottom Navigation Section -->
+    <div class="flex flex-col items-center space-y-4">
+      <a href="blog.html" class="group relative p-2 text-gray-400 hover:text-white transition">
+        <i class="fas fa-blog text-lg"></i>
+        <span class="sidebar-tooltip group-hover:scale-100">Blog</span>
+
+      </a>
+      <a href="contact.html" class="group relative p-2 text-gray-400 hover:text-white transition">
+        <i class="fas fa-envelope text-lg"></i>
+        <span class="sidebar-tooltip group-hover:scale-100">Contact</span>
+      </a>
+      <a href="donate.html" class="group relative p-2 mt-2 text-yellow-400 hover:text-yellow-300 transition">
+        <i class="fas fa-hand-holding-heart text-lg"></i>
+        <span class="sidebar-tooltip group-hover:scale-100">Donate</span>
+      </a>
+    
+    </div>
+  </div>
+</div>
+
+<!-- Mobile Sidebar Trigger -->
+<button id="mobile-menu-button" class="md:hidden fixed top-6 left-4 z-50 text-gray-400 hover:text-white">
+  <i class="fas fa-bars text-2xl"></i>
+</button>
+
+<!-- Mobile Sidebar -->
+<div id="sidebar" class="fixed left-0 top-0 h-full w-64 bg-[#0a0a0a] border-r border-[#252525] transform -translate-x-full transition-transform duration-300 ease-in-out z-40">
+  <div class="flex flex-col h-full pt-20 pb-8 px-6">
+    <div class="text-2xl font-bold mb-12 pl-2">
+      <span class="text-white">FEATHER</span>
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#588157] to-[#3a5a40]">ALLIANCE</span>
+    </div>
+    <nav class="flex-1 space-y-8">
+      <a href="#" class="sidebar-link group">
+        <i class="fas fa-home text-lg mr-4"></i>
+        <span>Home</span>
+      </a>
+      <a href="#impact" class="sidebar-link group">
+        <i class="fas fa-chart-line text-lg mr-4"></i>
+        <span>Impact</span>
+      </a>
+      <a href="#gallery" class="sidebar-link group">
+        <i class="fas fa-play-circle text-lg mr-4"></i>
+        <span>Gallery</span>
+      </a>
+      <a href="#network" class="sidebar-link group">
+        <i class="fas fa-globe-americas text-lg mr-4"></i>
+        <span>Global Network</span>
+      </a>
+      <a href="#contact" class="sidebar-link group">
+        <i class="fas fa-envelope text-lg mr-4"></i>
+        <span>Contact</span>
+      </a>
+    </nav>
+   
+  </div>
+</div>
+
+<!-- Overlay -->
+<div id="sidebar-overlay" class="fixed inset-0 bg-black/80 z-30 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"></div>
+
+<!-- Navbar -->
+<nav class="fixed w-full z-50">
+  <div class="absolute inset-0 bg-[#0a0a0a]/80 backdrop-blur-xl border-b border-[#333]/30"></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-20 items-center">
+      <div class="flex items-center">
+        <div class="text-2xl font-bold tracking-tight relative">
+          <span class="text-white">CURRERE </span>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#588157] to-[#3a5a40]">FOUNDATION</span>
+          <span class="absolute inset-0 bg-white/5 rounded-full blur-md opacity-0 hover:opacity-100 transition-opacity"></span>
+        </div>
+      </div>
+      <div class="hidden md:flex space-x-1">
+        <a href="#" class="nav-link group">
+          <span class="nav-text">Empowering</span>
+          <span class="nav-underline"></span>
+        </a>
+        <a href="#" class="nav-link group">
+          <span class="nav-text">Underprivileged</span>
+          <span class="nav-underline"></span>
+        </a>
+        <a href="#" class="nav-link group">
+          <span class="nav-text">Communities Through</span>
+          <span class="nav-underline"></span>
+        </a>
+        <a href="#" class="nav-link group">
+          <span class="nav-text">Education, Equity,</span>
+          <span class="nav-underline"></span>
+        </a>
+        <a href="#" class="nav-link group">
+          <span class="nav-text">and Opportunity</span>
+          <span class="nav-underline"></span>
+        </a>
+      </div>
+      <div class="flex items-center space-x-4">
+        <button class="globalist-btn group">
+          <a href="#Donate" class="jozi-bounce-btn font-medium">
+            <span>Donate</span><i class="fas fa-hand-holding-heart text-xl"></i>
+          </a>
+          <span class="btn-globe">
+            <i class="fas fa-globe-americas"></i>
+          </span>
+        </button>
+        <button id="navbar-mobile-menu-button" class="md:hidden text-gray-400 hover:text-white">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- CSS -->
+<style>
+  .sidebar-tooltip {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    transform-origin: left center;
+    background: #333;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    margin-left: 0.8rem;
+    transition: transform 0.2s ease;
+    pointer-events: none;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-width: 768px) {
+    .desktop-sidebar {
+      top: 5rem;
+      height: calc(100vh - 5rem);
+    }
+  }
+
+  #sidebar-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #sidebar.active {
+    transform: translateX(0);
+  }
+
+  .sidebar-link {
+    display: flex;
+    align-items: center;
+    color: #9ca3af;
+    transition: color 0.2s ease;
+  }
+
+  .sidebar-link:hover {
+    color: #ffffff;
+  }
+</style>
+
+
+
+
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center bg-black text-white relative overflow-hidden">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80')] bg-cover bg-center opacity-20"></div>
+  <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+    <div class="floating-feather mb-8">
+      <svg width="80" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="mx-auto">
+        <path d="M12 3v18M8 6l4-3 4 3M8 18l4 3 4-3M3 12h18" stroke-linecap="round"/>
+      </svg>
+    </div>
+<h1 class="text-5xl md:text-7xl mb-6 text-white">
+  <span class="bouncing-headline">
+    <span>G</span><span>L</span><span>O</span><span>B</span><span>A</span><span>L</span> 
+    <span>E</span><span>Q</span><span>U</span><span>I</span><span>T</span><span>Y</span> 
+    <span>I</span><span>N</span> 
+    <span>A</span><span>C</span><span>T</span><span>I</span><span>O</span><span>N</span>
+  </span>
+<p class="globalist-subtext text-xl md:text-2xl mb-8">Advocating <span class="text-blue-300 font-bold">for systemic</span> change <span class="text-purple-300 font-bold">through education, policy, and community-led solutions</span>.</p>
+     <a href="#Donate" class="jozi-bounce-btn font-medium">
+  <span>Donate</span><i class="fas fa-hand-holding-heart text-6xl"></i>
+</a>
+ 
+  </div>
+</section>
+
+ 
+
+
+  <!-- Live Global Pulse (2025 Custom Feature) -->
+ <!-- Enhanced Live Global Pulse (2025 Premium Feature) -->
+<section class="py-20 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#0a0a0a] to-[#000000] relative overflow-hidden">
+  <!-- Animated background elements -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-20 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+    <div class="absolute bottom-1/3 right-1/5 w-3 h-3 bg-green-400 rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
+    <div class="absolute top-1/4 right-1/3 w-1 h-1 bg-purple-400 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Header with live indicator -->
+    <div class="flex flex-col items-center mb-12">
+      <div class="inline-flex items-center mb-3 px-4 py-2 rounded-full bg-[#181818] border border-[#252525]">
+        <span class="live-pulse w-2.5 h-2.5 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mr-2"></span>
+        <span class="font-mono text-xs tracking-widest text-gray-300 uppercase">LIVE GLOBAL PULSE • 2025</span>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300 mb-4">
+        Real-Time Impact Matrix
+      </h2>
+      <p class="text-lg text-gray-400 max-w-2xl">
+        Monitoring worldwide equity progress through our neural network of 38,000+ field sensors
+      </p>
+    </div>
+
+    <!-- Enhanced Metrics Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-10">
+      <!-- Education Card (with trend indicator) -->
+      <div class="bg-[#181818] p-5 rounded-xl border border-[#252525] hover:border-[#3a5a40] transition-all hover:shadow-lg hover:shadow-[#3a5a40]/10 group">
+        <div class="flex justify-between items-start mb-2">
+          <p class="text-gray-400 text-sm">EDUCATION</p>
+          <span class="text-xs px-2 py-1 rounded-full bg-[#3a5a40]/20 text-green-400 flex items-center">
+            <i class="fas fa-arrow-up mr-1 text-xs"></i> 12.7%
+          </span>
+        </div>
+        <p class="text-3xl font-bold text-white mb-1" id="live-education">24,891</p>
+        <p class="text-gray-400 text-sm">Children in school today</p>
+        <div class="mt-3 h-1 w-full bg-[#252525] rounded-full overflow-hidden">
+          <div class="h-full bg-gradient-to-r from-[#3a5a40] to-[#588157]" style="width: 87%"></div>
+        </div>
+      </div>
+
+      <!-- Women Empowerment Card -->
+      <div class="bg-[#181818] p-5 rounded-xl border border-[#252525] hover:border-[#6d597a] transition-all hover:shadow-lg hover:shadow-[#6d597a]/10 group">
+        <div class="flex justify-between items-start mb-2">
+          <p class="text-gray-400 text-sm">EMPOWERMENT</p>
+          <span class="text-xs px-2 py-1 rounded-full bg-[#6d597a]/20 text-purple-400 flex items-center">
+            <i class="fas fa-bolt mr-1 text-xs"></i> 8.3%
+          </span>
+        </div>
+        <p class="text-3xl font-bold text-white mb-1" id="live-women">5,672</p>
+        <p class="text-gray-400 text-sm">Women trained this week</p>
+        <div class="mt-3 h-1 w-full bg-[#252525] rounded-full overflow-hidden">
+          <div class="h-full bg-gradient-to-r from-[#6d597a] to-[#b56576]" style="width: 68%"></div>
+        </div>
+      </div>
+
+      <!-- Policy Impact Card -->
+      <div class="bg-[#181818] p-5 rounded-xl border border-[#252525] hover:border-[#355070] transition-all hover:shadow-lg hover:shadow-[#355070]/10 group">
+        <div class="flex justify-between items-start mb-2">
+          <p class="text-gray-400 text-sm">POLICY</p>
+          <span class="text-xs px-2 py-1 rounded-full bg-[#355070]/20 text-blue-400 flex items-center">
+            <i class="fas fa-check-double mr-1 text-xs"></i> 42
+          </span>
+        </div>
+        <p class="text-3xl font-bold text-white mb-1" id="live-policy">189</p>
+        <p class="text-gray-400 text-sm">Active policy campaigns</p>
+        <div class="mt-3 h-1 w-full bg-[#252525] rounded-full overflow-hidden">
+          <div class="h-full bg-gradient-to-r from-[#355070] to-[#4a7c93]" style="width: 63%"></div>
+        </div>
+      </div>
+
+      <!-- Global Reach Card -->
+      <div class="bg-[#181818] p-5 rounded-xl border border-[#252525] hover:border-[#6a4c93] transition-all hover:shadow-lg hover:shadow-[#6a4c93]/10 group">
+        <div class="flex justify-between items-start mb-2">
+          <p class="text-gray-400 text-sm">GLOBAL REACH</p>
+          <span class="text-xs px-2 py-1 rounded-full bg-[#6a4c93]/20 text-indigo-400 flex items-center">
+            <i class="fas fa-globe-americas mr-1 text-xs"></i> +3
+          </span>
+        </div>
+        <p class="text-3xl font-bold text-white mb-1" id="live-countries">47</p>
+        <p class="text-gray-400 text-sm">Countries engaged</p>
+        <div class="mt-3 h-1 w-full bg-[#252525] rounded-full overflow-hidden">
+          <div class="h-full bg-gradient-to-r from-[#6a4c93] to-[#8a5a44]" style="width: 94%"></div>
+        </div>
+      </div>
+
+      <!-- New: Climate Impact Card (visible on lg+ screens) -->
+      <div class="hidden lg:block bg-[#181818] p-5 rounded-xl border border-[#252525] hover:border-[#588157] transition-all hover:shadow-lg hover:shadow-[#588157]/10 group">
+        <div class="flex justify-between items-start mb-2">
+          <p class="text-gray-400 text-sm">CLIMATE</p>
+          <span class="text-xs px-2 py-1 rounded-full bg-[#588157]/20 text-green-300 flex items-center">
+            <i class="fas fa-leaf mr-1 text-xs"></i> 1.2M
+          </span>
+        </div>
+        <p class="text-3xl font-bold text-white mb-1" id="live-climate">4.8M</p>
+        <p class="text-gray-400 text-sm">Trees planted</p>
+        <div class="mt-3 h-1 w-full bg-[#252525] rounded-full overflow-hidden">
+          <div class="h-full bg-gradient-to-r from-[#588157] to-[#3a5a40]" style="width: 82%"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+</section>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Feather Alliance | Global Equity Advocates</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- 2025 Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: #0a0a0a;
+      color: #f0f0f0;
+    }
+    
+    h1, h2, h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    
+    .hero-title {
+      font-family: 'Space Grotesk', sans-serif;
+      letter-spacing: -0.03em;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(90deg, #f0f0f0, #a0a0a0);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .globe-section {
+      background: radial-gradient(circle at 30% 50%, rgba(10, 80, 120, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    }
+    
+    .pill-button {
+      border-radius: 9999px;
+      transition: all 0.3s ease;
+    }
+    
+    .pill-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .impact-card {
+      transition: all 0.3s ease;
+      border: 1px solid #252525;
+    }
+    
+    .impact-card:hover {
+      transform: translateY(-5px);
+      border-color: #3a5a40;
+      box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- Navigation -->
+  
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 px-4 text-center bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80')] bg-cover bg-center bg-fixed bg-opacity-20 bg-blend-overlay">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="hero-title text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        <span class="gradient-text">Reimagining Global Equity</span>
+      </h1>
+      <p class="globalist-subtext text-xl md:text-2xl mb-8">Empowering underprivileged Communities Through Education, Equity, and Opportunity.</p>
+      <div class="flex justify-center space-x-4">
+        <a href="#Donate" class="jozi-bounce-btn font-medium">
+  <span>Donate</span><i class="fas fa-hand-holding-heart text-xl"></i>
+</a>
+        <a href="#join" class="jozi-bounce-btn font-medium">
+  <span>Join the Movement</span>
+</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision Section -->
+<!-- Vision Section - 2025 Globalist Redesign -->
+<section id="vision" class="py-24 px-4 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#0a0a0a] to-[#000000] relative overflow-hidden">
+  <!-- Animated particles -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-1/3 left-1/4 w-2 h-2 bg-[#588157] rounded-full animate-float" style="animation-delay: 0.5s;"></div>
+    <div class="absolute bottom-1/4 right-1/3 w-1 h-1 bg-[#6d597a] rounded-full animate-float" style="animation-delay: 1s;"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <!-- Vision Content -->
+      <div class="order-2 lg:order-1">
+        <!-- Section Header -->
+        <div class="mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#a3b18a] to-[#588157]">
+            OUR GLOBAL VISION
+          </h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-[#3a5a40] to-[#588157] mb-8"></div>
+        </div>
+
+        <!-- Vision Cards -->
+        <div class="space-y-8">
+          <!-- Card 1 -->
+          <div class="vision-card group">
+            <div class="card-icon bg-[#3a5a40]/20 text-[#588157]">
+              <i class="fas fa-atom"></i>
+            </div>
+            <div>
+              <h3 class="card-title">Unlocking Potential</h3>
+              <p class="card-text">
+                A world where every individual achieves their full purpose through education and opportunity
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="vision-card group">
+            <div class="card-icon bg-[#6d597a]/20 text-[#b56576]">
+              <i class="fas fa-network-wired"></i>
+            </div>
+            <div>
+              <h3 class="card-title">Knowledge Ecosystem</h3>
+              <p class="card-text">
+                Global networks where information flows freely across all borders and languages
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="vision-card group mb-20">
+            <div class="card-icon bg-[#355070]/20 text-[#4a7c93]">
+              <i class="fas fa-venus"></i>
+            </div>
+            <div>
+              <h3 class="card-title">Gender Equity</h3>
+              <p class="card-text">
+                Societies where women lead equally in all aspects of community and governance
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Global Reach Counter -->
+        <div class="vision-card group mt-20 flex items-center space-x-6 bg-[#181818] border border-[#252525] rounded-xl p-6 max-w-md">
+          <div class="text-5xl">🌍</div>
+          <div>
+            <p class="text-sm text-gray-400 uppercase tracking-wider">Current Global Reach</p>
+            <div class="flex space-x-8 mt-2">
+              <div>
+                <p class="text-3xl font-bold text-white" id="country-counter">0</p>
+                <p class="text-gray-400 text-sm">Countries</p>
+              </div>
+              <div>
+                <p class="text-3xl font-bold text-white" id="chapter-counter">0</p>
+                <p class="text-gray-400 text-sm">Local Chapters</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual Element -->
+      <div class="order-1 lg:order-2 relative">
+        <div class="vision-image-container">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+               alt="Global community" 
+               class="vision-image">
+          <div class="vision-overlay">
+            <p class="text-white text-lg font-medium">2024 Global Summit in Nairobi</p>
+            <button class="mt-4 px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white border border-white/20 hover:bg-[#588157]/50 transition">
+              Watch Highlights <i class="fas fa-play ml-2"></i>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Floating stats -->
+        <div class="vision-card group absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-[#181818] border border-[#252525] rounded-xl p-4 shadow-lg flex space-x-8">
+          <div class="text-center">
+            <p class="text-2xl font-bold text-[#588157]">12.8K+</p>
+            <p class="text-gray-400 text-xs">Lives Impacted</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-bold text-[#6d597a]">142</p>
+            <p class="text-gray-400 text-xs">Projects</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-bold text-[#355070]">47</p>
+            <p class="text-gray-400 text-xs">Nations</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Vision Card Styles */
+  
+</style>
+
+<script>
+  // Animated counters
+  function animateCounters() {
+    const countryCounter = document.getElementById('country-counter');
+    const chapterCounter = document.getElementById('chapter-counter');
+    
+    const animate = (element, target) => {
+      let count = 0;
+      const increment = target / 30;
+      const timer = setInterval(() => {
+        count += increment;
+        if (count >= target) {
+          element.textContent = target;
+          clearInterval(timer);
+        } else {
+          element.textContent = Math.floor(count);
+        }
+      }, 30);
+    };
+    
+    animate(countryCounter, 47);
+    animate(chapterCounter, 142);
+  }
+
+  // Trigger when section is in view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounters();
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  observer.observe(document.getElementById('vision'));
+</script>
+  </section>
+
+  <!-- Mission Section -->
+  <!-- Mission Section - 2025 Globalist Redesign -->
+<section id="mission" class="py-24 px-4 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#0a0a0a] to-[#000000] relative overflow-hidden">
+  <!-- Animated background elements -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute top-1/4 left-1/4 w-1 h-1 bg-[#3a5a40] rounded-full animate-pulse"></div>
+    <div class="absolute bottom-1/3 right-1/3 w-2 h-2 bg-[#6d597a] rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    <!-- Section Header -->
+    <div class="text-center mb-20">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#588157] to-[#a3b18a]">
+        OUR GLOBAL MSSION
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-[#3a5a40] to-[#588157] mx-auto mb-8"></div>
+    </div>
+
+    <!-- Mission Cards Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+      <!-- Card 1: Core Mission -->
+      <div class="mission-card group">
+        <div class="card-icon bg-[#3a5a40]/20 text-[#588157]">
+          <i class="fas fa-bullseye"></i>
+        </div>
+        <h3 class="card-title">Core Purpose</h3>
+        <p class="card-text">
+          To lighten the burdens of inequity through systemic change and global cooperation
+        </p>
+      </div>
+
+      <!-- Card 2: Empowerment -->
+      <div class="mission-card group">
+        <div class="card-icon bg-[#6d597a]/20 text-[#b56576]">
+          <i class="fas fa-arrows-up-to-line"></i>
+        </div>
+        <h3 class="card-title">Global Empowerment</h3>
+        <p class="card-text">
+          Expand access to education, resources and sustainable opportunities for underprivileged communities worldwide
+        </p>
+      </div>
+
+      <!-- Card 3: Partnerships -->
+      <div class="mission-card group">
+        <div class="card-icon bg-[#355070]/20 text-[#4a7c93]">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <h3 class="card-title">Cross-Border Alliances</h3>
+        <p class="card-text">
+          Drive long-term change through international partnerships and community-led initiatives
+        </p>
+      </div>
+
+      <!-- Card 4: Vision -->
+      <div class="mission-card group">
+        <div class="card-icon bg-[#588157]/20 text-[#3a5a40]">
+          <i class="fas fa-globe"></i>
+        </div>
+        <h3 class="card-title">Equitable Future</h3>
+        <p class="card-text">
+          Building a just, empowered world with gender equality and community resilience
+        </p>
+      </div>
+    </div>
+
+    <!-- Gigantic Donate Button -->
+     
+    <div class="text-center mt-12 text-6xl">
+      <a href="#donate" class="global-donate-button jozi-bounce-btn font-medium">
+        <span class="button-text">Fuel Our Global Mission</span>
+        <span class="button-icon">
+          <i class="fas fa-hand-holding-heart"></i>
+        </span>
+        <span class="button-pulse"></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Back to Top Button -->
+<button id="backToTop" class="fixed bottom-8 right-8 z-50 opacity-0 invisible transition-all duration-500">
+  <div class="bg-white text-red p-4 rounded-full shadow-x3 hover:shadow-3xl transition-all duration-300 group">
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:-translate-y-1 transition-transform duration-300">
+      <p>Back to Top</p>
+        <!-- Feather Icon -->
+      <path d="M12 3v18M8 6l4-3 4 3M3 12h18" stroke-linecap="round"/>
+      <!-- Globe Pulse Animation -->
+      <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-opacity="0.2" class="animate-ping absolute" style="animation-duration: 3s"/>
+    </svg>
+  </div>
+  <span class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity">Ascend</span>
+</button>
+
+<script>
+  // Back to Top Logic
+  const backToTop = document.getElementById('backToTop');
+  
+  // Show/hide button on scroll
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+      backToTop.classList.remove('opacity-0', 'invisible');
+      backToTop.classList.add('opacity-100', 'visible');
+    } else {
+      backToTop.classList.remove('opacity-100', 'visible');
+      backToTop.classList.add('opacity-0', 'invisible');
+    }
+  });
+
+  // Smooth scroll to top
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+  <!-- Focus Areas -->
+  <section id="focus-areas" class="py-20 px-4 max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        <span class="gradient-text">Core Focus Areas</span>
+      </h2>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        Targeted interventions where we create measurable, scalable impact
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Education Access -->
+      <div class="bg-[#181818] rounded-xl overflow-hidden border border-[#252525]">
+        <div class="p-8">
+          <div class="flex items-center mb-4">
+            <div class="bg-[#3a5a40] text-white p-3 rounded-full mr-4">
+              <i class="fas fa-book-open text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold">Education Access</h3>
+          </div>
+          <p class="text-gray-400 mb-6">
+            Our Global Learning Initiative has established 1,200 community learning hubs across 38 countries, providing localized education solutions that combine digital tools with in-person mentorship.
+          </p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start">
+              <i class="fas fa-check text-[#3a5a40] mt-1 mr-2"></i>
+              <span>Digital literacy programs reaching 250,000+ annually</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[#3a5a40] mt-1 mr-2"></i>
+              <span>Teacher training in 15 languages</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[#3a5a40] mt-1 mr-2"></i>
+              <span>Open-source curriculum adaptable to local contexts</span>
+            </li>
+          </ul>
+          <a href="#" class="text-[#3a5a40] hover:underline font-medium">Explore Education Programs →</a>
+        </div>
+      </div>
+      
+      <!-- Women & Girls -->
+      <div class="bg-[#181818] rounded-xl overflow-hidden border border-[#252525]">
+        <div class="p-8">
+          <div class="flex items-center mb-4">
+            <div class="bg-[#6d597a] text-white p-3 rounded-full mr-4">
+              <i class="fas fa-venus text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold">Women & Girls Empowerment</h3>
+          </div>
+          <p class="text-gray-400 mb-6">
+            The Rising Feathers program creates ecosystems where women and girls can thrive through education, leadership training, and economic opportunities.
+          </p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start">
+              <i class="fas fa-check text-[#6d597a] mt-1 mr-2"></i>
+              <span>92% high school completion rate for participants</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[#6d597a] mt-1 mr-2"></i>
+              <span>Micro-enterprise incubators in 24 countries</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[#6d597a] mt-1 mr-2"></i>
+              <span>Global mentorship network with 8,000+ professionals</span>
+            </li>
+          </ul>
+          <a href="#" class="text-[#6d597a] hover:underline font-medium">Explore Empowerment Programs →</a>
+        </div>
+      </div>
+      
+      <!-- Global Advocacy -->
+      <div class="bg-[#181818] rounded-xl overflow-hidden border border-[#252525] md:col-span-2">
+        <div class="md:flex">
+          <div class="md:w-1/2 p-8">
+            <div class="flex items-center mb-4">
+              <div class="bg-[#355070] text-white p-3 rounded-full mr-4">
+                <i class="fas fa-bullhorn text-xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold">Community-Led Development</h3>
+            </div>
+            <p class="text-gray-400 mb-6">
+             <span class="text-blue-300 font-bold">We mobilize citizens across the African Continent to</span> advocate for policy changes that<span class="text-purple-300 font-bold"> address root causes of inequality, not just symptoms</span>.
+            </p>
+
+
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start">
+                <i class="fas fa-check text-[#355070] mt-1 mr-2"></i>
+                <span>142 active policy campaigns across 6 cities</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-[#355070] mt-1 mr-2"></i>
+                <span>Digital advocacy training in 11 languages</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-[#355070] mt-1 mr-2"></i>
+                <span>UN ECOSOC special consultative status</span>
+              </li>
+            </ul>
+            <a href="#" class="text-[#355070] hover:underline font-medium">Take Action Now →</a>
+          </div>
+          <div class="md:w-1/2 bg-[#252525] p-8 flex items-center">
+            <div>
+              <h4 class="text-xl font-bold mb-4">Current Advocacy Focus</h4>
+              <div class="space-y-4">
+                <div>
+                  <p class="font-medium mb-1">Global Education Compact</p>
+                  <div class="w-full bg-[#181818] rounded-full h-2">
+                    <div class="bg-[#355070] h-2 rounded-full" style="width: 72%"></div>
+                  </div>
+                </div>
+                <div>
+                  <p class="font-medium mb-1">Women's Economic Rights</p>
+                  <div class="w-full bg-[#181818] rounded-full h-2">
+                    <div class="bg-[#355070] h-2 rounded-full" style="width: 58%"></div>
+                  </div>
+                </div>
+                <div>
+                  <p class="font-medium mb-1">Digital Equity Initiative</p>
+                  <div class="w-full bg-[#181818] rounded-full h-2">
+                    <div class="bg-[#355070] h-2 rounded-full" style="width: 65%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Global Network -->
+  <section id="global-network" class="py-20 px-4 bg-[#121212]">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          <span class="gradient-text">Our Global Network</span>
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          A decentralized movement of change-makers across the continent
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <div class="text-center p-8">
+          <div class="text-5xl mb-4">🌎</div>
+          <p class="text-4xl font-bold mb-2">47</p>
+          <p class="text-gray-400">Countries</p>
+        </div>
+        <div class="text-center p-8">
+          <div class="text-5xl mb-4">👥</div>
+          <p class="text-4xl font-bold mb-2">142</p>
+          <p class="text-gray-400">Local Chapters</p>
+        </div>
+        <div class="text-center p-8">
+          <div class="text-5xl mb-4">💡</div>
+          <p class="text-4xl font-bold mb-2">8.2k</p>
+          <p class="text-gray-400">Change-Makers</p>
+        </div>
+      </div>
+      
+      <div class="bg-[#181818] rounded-xl overflow-hidden border border-[#252525]">
+        <div class="md:flex">
+          <div class="md:w-1/2 p-8 md:p-12">
+            <h3 class="text-2xl font-bold mb-4">Local Leadership, Global Impact</h3>
+            <p class="text-gray-400 mb-6">
+              Our model empowers local leaders with global resources. Each chapter adapts our core principles to their community's unique needs while contributing to our collective knowledge base.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="pill-button bg-white text-black px-6 py-2 font-medium text-sm">
+                Find Your Chapter
+              </a>
+              <a href="#" class="pill-button bg-transparent border border-white text-white px-6 py-2 font-medium text-sm">
+                Start a Chapter
+              </a>
+            </div>
+          </div>
+          <div class="md:w-1/2 bg-[url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')] bg-cover bg-center">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- Join Section -->
+  <section id="join" class="py-20 px-4 globe-section">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        <span class="gradient-text">Join the Movement</span>
+      </h2>
+      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+        Equity is a team sport. Add your voice, skills, and passion to our global network.
+      </p>
+      
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <div class="bg-[#181818] p-6 rounded-xl border border-[#252525] hover:border-[#3a5a40] transition">
+          <div class="text-3xl mb-4">✉️</div>
+          <h3 class="text-xl font-bold mb-2">Stay Informed</h3>
+          <p class="text-gray-400 text-sm mb-4">Get our global briefings and action alerts</p>
+          <a href="#" class="text-sm font-medium hover:underline">Subscribe →</a>
+        </div>
+        <div class="bg-[#181818] p-6 mt-8 border border-[#252525] hover:border-[#6d597a] transition">
+          <div class="text-3xl mb-4">🤝</div>
+          <h3 class="text-xl font-bold mb-2">Take Action</h3>
+          <p class="text-gray-400 text-sm mb-4">Join a campaign or start your own</p>
+          <a href="#" class="text-sm font-medium hover:underline">Act Now →</a>
+        </div>
+        <div class="bg-[#181818] p-6 rounded-xl border border-[#252525] hover:border-[#355070] transition">
+          <div class="text-3xl mb-4">💸</div>
+          <h3 class="text-xl font-bold mb-2">Fuel the Work</h3>
+          <p class="text-gray-400 text-sm mb-4">Support our global impact</p>
+          <a href="#" classDr. Martin Luther King, Jr.="text-sm font-medium hover:underline">Donate →</a>
+        </div>
+      </div>
+    <div class="relative overflow-hidden bg-[#0a0e17] min-h-[500px] flex items-center justify-center p-6 text-center mb-5px">
+  <!-- Floating Holographic Orb -->
+  <div class="absolute w-[800px] h-[800px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+    <!-- Orb Core -->
+    <div class="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-500/20 to-purple-500/10 blur-[80px] animate-[pulse_12s_infinite]"></div>
+    
+    <!-- Orb Rings (3D Effect) -->
+    <div class="absolute inset-0 border-[1px] border-cyan-400/30 rounded-full animate-[spin_60s_linear_infinite]"></div>
+    <div class="absolute inset-8 border-[1px] border-purple-400/20 rounded-full animate-[spin_reverse_45s_linear_infinite]"></div>
+    
+    <!-- Data Particles -->
+    <div class="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-cyan-400/70 shadow-[0_0_15px_2px_#00f7ff] animate-[float_8s_ease-in-out_infinite]"></div>
+    <!-- Add 5-7 more particles at different positions -->
+  </div>
+
+  <!-- Content -->
+  <div class="max-w-4xl mx-auto relative z-10">
+    <blockquote class="text-3xl md:text-5xl font-bold italic bg-clip-text text-transparent bg-gradient-to-r from-cyan-200 to-white leading-tight drop-shadow-[0_0_12px_rgba(0_247_255_0.7)]">
+      <span class="text-purple-300 font-bold">“Life's most persistent and urgent question is..., <br> 'What are you doing for others?'”</span>.
+    </blockquote>
+    <p class="mt-8 text-2xl font-light text-cyan-300 glow-text mb-10">— Dr. Martin Luther King, Jr. </p>
+
+              <p class="text-3xl"><span class="text-blue-300 font-bold mt-8">"We can do no great things, only small things with great love and care..."</span> <span class="text-purple-300 font-bold"><br> <p class="mt-8 text-2xl font-light text-cyan-300 glow-text mb-10">– Mother Teresa </span> </p> </p>
+
+  
+    
+    <!-- Interactive Button -->
+    <a href="/impact" class="inline-block mt-16 px-12 py-4 rounded-full font-bold text-cyan-950 bg-cyan-300/90 hover:bg-white transition-all duration-500 hover:shadow-[0_0_40px_15px_rgba(0_247_255_0.4)] relative overflow-hidden border border-cyan-400/50">
+      <span class="relative z-10 flex items-center justify-center gap-2">
+        <svg class="w-5 h-5 animate-[pulse_2s_infinite]" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L4 12l8 10 8-10-8-10z"/>
+        </svg>
+        Explore Our Holographic Impact
+      </span>
+      <span class="absolute inset-0 bg-[conic-gradient(at_top_right,transparent_0%,#00f7ff_30%,transparent_70%)] opacity-0 hover:opacity-100 transition-opacity duration-700"></span>
+    </a>
+  </div>
+</div>
+      
+      <div class="flex flex-wrap justify-center gap-4 mt-5">
+        <a href="#" class="pill-button bg-white text-black px-6 py-3 font-medium">
+          <i class="fab fa-twitter mr-2"></i> Follow
+        </a>
+        <a href="#" class="pill-button bg-[#3a5a40] text-white px-6 py-3 font-medium">
+          <i class="fas fa-hands-helping mr-2"></i> Volunteer
+        </a>
+        <a href="#" class="pill-button bg-[#355070] text-white px-6 py-3 font-medium">
+          <i class="fas fa-briefcase mr-2"></i> Careers
+        </a>
+      </div>
+    </div>
+  </section>
+<!--Impact-->
+  <section id="impact" class="py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">OUR IMPACT (2025)</h2>
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <!-- Interactive Image with Overlay -->
+      <div class="relative group">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+             alt="Community Impact" 
+             class="rounded-lg shadow-lg w-full h-auto group-hover:opacity-90 transition duration-500">
+        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 flex items-center justify-center transition duration-500">
+          <button class="opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-4 transition duration-500 bg-white text-black px-6 py-2 rounded-full font-medium">
+            <i class="fas fa-play mr-2"></i> Watch Story
+          </button>
+        </div>
+      </div>
+
+      <!-- Dynamic Stats with Animated Counters -->
+      <div>
+        <h3 class="text-2xl font-semibold mb-4">By The Numbers</h3>
+        <div class="space-y-8">
+          <!-- Stat 1: Animated Counter -->
+          <div class="border-l-4 border-black pl-4">
+            <p class="text-5xl font-bold mb-2" id="counter-children">0</p>
+            <p class="text-gray-600">Children educated since 2020</p>
+            <div class="w-full bg-gray-200 h-1 mt-2">
+              <div class="bg-black h-1 w-0" id="progress-children"></div>
+            </div>
+          </div>
+
+          <!-- Stat 2: Interactive Radial Progress -->
+          <div>
+            <div class="flex items-end space-x-4">
+              <div class="relative w-20 h-20">
+                <svg class="w-full h-full" viewBox="0 0 36 36">
+                  <path d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                    fill="none"
+                    stroke="#e5e7eb"
+                    stroke-width="3"/>
+                  <path d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="3"
+                    stroke-dasharray="89, 100"
+                    id="girls-progress"/>
+                  <text x="18" y="20" text-anchor="middle" dy=".3em" font-size="10" fill="#fff" font-weight="bold">92%</text>
+                </svg>
+              </div>
+              <div>
+                <p class="text-gray-600">Girls graduating high school in 2025</p>
+                <p class="text-sm text-gray-500">(+7% since 2023)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stat 3: Interactive Map Preview -->
+          <div class="pt-4">
+            <div class="flex items-center space-x-4">
+              <div class="text-4xl">🌍</div>
+              <div>
+                <p class="text-3xl font-bold">42</p>
+                <p class="text-gray-600">Countries reached</p>
+                <button class="text-sm mt-1 flex items-center text-black font-medium hover:underline">
+                  Explore map <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stat 4: AI-Powered Projection -->
+          <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+            <div class="flex items-start">
+              <div class="bg-black text-white p-2 rounded-full mr-3">
+                <i class="fas fa-robot text-xs"></i>
+              </div>
+              <div>
+                <p class="font-semibold">2025 Projection</p>
+                <p class="text-sm text-gray-600">Based on current growth, we'll impact <span class="font-bold">250,000+ lives</span> by year-end.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Micro-Interactions Footer -->
+    <div class="mt-16 text-center">
+      <p class="text-gray-500 mb-4">See how we calculate impact:</p>
+      <div class="flex justify-center space-x-6">
+        <button class="flex items-center text-black font-medium hover:underline">
+          <i class="fas fa-file-pdf mr-2"></i> Methodology
+        </button>
+        <button class="flex items-center text-black font-medium hover:underline">
+          <i class="fas fa-database mr-2"></i> Raw Data
+        </button>
+        <button class="flex items-center text-black font-medium hover:underline">
+          <i class="fas fa-video mr-2"></i> Case Studies
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  // Animated Counter (2025 Update)
+  function animateCounter(id, target, duration = 2000) {
+    const element = document.getElementById(id);
+    const progress = document.getElementById(id.replace('counter', 'progress'));
+    let start = 0;
+    const increment = target / (duration / 16);
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= target) {
+        element.textContent = Math.floor(target).toLocaleString() + '+';
+        progress.style.width = '100%';
+        clearInterval(timer);
+      } else {
+        element.textContent = Math.floor(start).toLocaleString();
+        progress.style.width = `${(start / target) * 100}%`;
+      }
+    }, 16);
+  }
+
+ // Impact Counter Observer - Single Focus Implementation
+const impactObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Animate numerical counter
+      animateCounter('counter-children', 125000);
+      
+      // Animate radial progress (girls' education metric)
+      const radial = document.getElementById('girls-progress');
+      radial.style.strokeDasharray = '0, 100'; // Reset state
+      setTimeout(() => {
+        radial.style.transition = 'stroke-dasharray 1.5s ease-out';
+        radial.style.strokeDasharray = '89, 100'; // 89% completion
+      }, 500);
+      
+      impactObserver.unobserve(entry.target); // Disconnect after triggering
+    }
+  });
+}, { threshold: 0.1 });
+
+// Activate only on the impact section
+impactObserver.observe(document.getElementById('impact'));
+</script>
+
+<!-- === CONTACT SECTION === -->
+<section id="contact" class="py-20 bg-black text-white relative overflow-hidden">
+  <!-- Futuristic Global BG Image (Data Centers + Earth) -->
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-20"></div>
+  <!-- Grid Overlay -->
+  <div class="absolute inset-0 bg-grid-white/[0.03]"></div>
+
+  <div class="max-w-6xl mx-auto px-4 relative z-10">
+    <div class="text-center mb-16">
+      <div class="inline-block mb-6">
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="mx-auto">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <path d="M22 6l-10 7L2 6"></path>
+        </svg>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">GLOBAL COORDINATES</h2>
+      <p class="text-xl opacity-80 max-w-2xl mx-auto">Connect with our network across physical and digital frontiers.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12">
+      <!-- Contact Form -->
+      <div class="bg-gray-900 p-8 rounded-xl border border-gray-800 shadow-2xl backdrop-blur-sm">
+        <h3 class="text-2xl font-semibold mb-6 flex items-center">
+          <span class="mr-2">📡</span> Direct Transmission
+        </h3>
+        
+        <form id="contactForm" class="space-y-6">
+          <div class="relative">
+            <input type="text" id="name" required 
+                   class="w-full bg-gray-800 border-0 border-b-2 border-gray-700 focus:border-white px-0 py-3 focus:ring-0 text-white placeholder-gray-500 transition-all duration-300">
+            <label for="name" class="absolute left-0 -top-5 text-sm opacity-80">Full Name</label>
+          </div>
+
+          <div class="relative">
+            <input type="email" id="email" required 
+                   class="w-full bg-gray-800 border-0 border-b-2 border-gray-700 focus:border-white px-0 py-3 focus:ring-0 text-white placeholder-gray-500 transition-all duration-300">
+            <label for="email" class="absolute left-0 -top-5 text-sm opacity-80">Email</label>
+          </div>
+
+          <div class="relative">
+            <select id="subject" class="w-full bg-gray-800 border-0 border-b-2 border-gray-700 focus:border-white px-0 py-3 focus:ring-0 text-white appearance-none">
+              <option value="" disabled selected>Select inquiry type</option>
+              <option>Partnership</option>
+              <option>Media Request</option>
+              <option>Donation</option>
+              <option>Volunteer</option>
+            </select>
+            <label for="subject" class="absolute left-0 -top-5 text-sm opacity-80">Subject</label>
+          </div>
+
+          <div class="relative pt-4">
+            <textarea id="message" rows="4" required 
+                      class="w-full bg-gray-800 border-0 border-b-2 border-gray-700 focus:border-white px-0 py-3 focus:ring-0 text-white placeholder-gray-500 transition-all duration-300"></textarea>
+            <label for="message" class="absolute left-0 -top-5 text-sm opacity-80">Message</label>
+          </div>
+
+          <button type="submit" class="w-full bg-white text-black py-4 px-6 rounded-lg font-medium hover:bg-gray-200 transition-all duration-500 flex items-center justify-center">
+            <span>Send Message</span>
+            <svg viewBox="0 0 24 24" width="20" height="20" class="ml-2">
+              <path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Global Contact Hubs -->
+      <div>
+        <h3 class="text-2xl font-semibold mb-6 flex items-center">
+          <span class="mr-2">🌐</span> Network Access Points
+        </h3>
+
+        <div class="space-y-6">
+          <!-- HQ -->
+          <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 group hover:border-white transition-all duration-300">
+            <div class="flex items-start">
+              <div class="bg-white text-black p-3 rounded-lg mr-4">
+                <i class="fas fa-globe-europe text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg mb-1">Headquarters</h4>
+                <p class="text-gray-400 mb-3">Turffontein, Johannesburg</p>
+                <div class="space-y-1">
+                  <p class="text-sm flex items-center">
+                    <i class="fas fa-envelope mr-2 opacity-70"></i>
+                    <a href="mailto:contact@featherfoundation.org" class="hover:underline">thecurrerefoundation@.gmail.com</a>
+                  </p>
+                  <p class="text-sm flex items-center">
+                    <i class="fas fa-phone-alt mr-2 opacity-70"></i>
+                    <a href="tel:+41223456789" class="hover:underline">+27 11 345 6789</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Regional Hubs -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-gray-900 p-4 rounded-lg border border-gray-800 hover:border-white transition-all duration-300">
+              <h4 class="font-semibold mb-1">Americas</h4>
+              <p class="text-xs text-gray-400 mb-2">New York, USA</p>
+              <p class="text-xs flex items-center">
+                <i class="fas fa-envelope mr-1 opacity-50"></i>
+                <a href="mailto:americas@featherfoundation.org" class="hover:underline">americas@currerefoundation.org</a>
+              </p>
+            </div>
+            <div class="bg-gray-900 p-4 rounded-lg border border-gray-800 hover:border-white transition-all duration-300">
+              <h4 class="font-semibold mb-1">Asia-Pacific</h4>
+              <p class="text-xs text-gray-400 mb-2">Singapore</p>
+              <p class="text-xs flex items-center">
+                <i class="fas fa-envelope mr-1 opacity-50"></i>
+                <a href="mailto:apac@featherfoundation.org" class="hover:underline">apac@currerefoundation.org</a>
+              </p>
+            </div>
+            <div class="bg-gray-900 p-4 rounded-lg border border-gray-800 hover:border-white transition-all duration-300">
+              <h4 class="font-semibold mb-1">Africa</h4>
+              <p class="text-xs text-gray-400 mb-2">Nairobi, Kenya</p>
+              <p class="text-xs flex items-center">
+                <i class="fas fa-envelope mr-1 opacity-50"></i>
+                <a href="mailto:africa@featherfoundation.org" class="hover:underline">africa@currerefoundation.org</a>
+              </p>
+            </div>
+            <div class="bg-gray-900 p-4 rounded-lg border border-gray-800 hover:border-white transition-all duration-300">
+              <h4 class="font-semibold mb-1">Digital</h4>
+              <p class="text-xs text-gray-400 mb-2">Metaverse</p>
+              <p class="text-xs flex items-center">
+                <i class="fab fa-discord mr-1 opacity-50"></i>
+                <span>@currerefoundation</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Emergency Contact -->
+          <div class="pt-4">
+            <div class="bg-red-900 bg-opacity-20 p-4 rounded-lg border border-red-800">
+              <h4 class="font-semibold mb-2 flex items-center">
+                <i class="fas fa-exclamation-triangle mr-2"></i> Urgent Media/Disaster Response
+              </h4>
+              <p class="text-sm flex items-center">
+                <i class="fas fa-mobile-alt mr-2"></i>
+                <a href="tel:+41229876543" class="hover:underline">+27 11 987 6543</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- Advocacy Toolkit -->
+  <section id="advocacy" class="py-20 px-4 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12">ADVOCACY TOOLKIT</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
+        <div class="text-4xl mb-4">📢</div>
+        <h3 class="text-xl font-semibold mb-2">Policy Briefs</h3>
+        <p class="text-gray-600 mb-4">Download our latest research on education equity.</p>
+        <a href="#" class="font-medium hover:underline">Download PDF →</a>
+      </div>
+      <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
+        <div class="text-4xl mb-4">✊</div>
+        <h3 class="text-xl font-semibold mb-2">Take Action</h3>
+        <p class="text-gray-600 mb-4">Send pre-written letters to lawmakers.</p>
+        <a href="#" class="font-medium hover:underline">Start Now →</a>
+      </div>
+      <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
+        <div class="text-4xl mb-4">📅</div>
+        <h3 class="text-xl font-semibold mb-2">Events</h3>
+        <p class="text-gray-600 mb-4">Join our next global advocacy summit.</p>
+        <a href="#" class="font-medium hover:underline">Register →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Adjusted Footer with Sidebar Space -->
+<footer class="bg-[#050505] border-t border-[#252525] pt-20 pb-12 pl-24 md:pl-32 pr-4 sm:px-6 lg:px-8 relative overflow-hidden">
+  <!-- Decorative elements shifted right -->
+  <div class="absolute -right-20 -bottom-20 w-96 h-96 opacity-10">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#588157" d="M40,-58.3C51.5,-53.2,60.5,-41.8,66.1,-28.3C71.7,-14.9,73.9,0.6,69.8,14.1C65.7,27.6,55.3,39.1,42.7,48.9C30.1,58.7,15,66.8,-0.6,67.6C-16.3,68.5,-32.5,62.1,-45.2,52.1C-57.9,42.1,-67,28.5,-70.8,12.7C-74.6,-3.1,-73.1,-21.1,-64.2,-35.1C-55.3,-49.1,-39,-59.1,-24.3,-63.2C-9.7,-67.3,3.3,-65.5,16.5,-61.7C29.7,-57.9,43.1,-52.1,40,-58.3Z" transform="translate(100 100)"/>
+    </svg>
+  </div>
+<div class="max-w-7xl mx-auto">
+    <!-- Footer grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16 ml-10">
+      <!-- Foundation info -->
+      <div class="col-span-2">
+        <h3 class="text-2xl font-bold mb-6 flex items-center">
+          <span class="text-white">FEATHER</span>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#588157] to-[#3a5a40] ml-2">FOUNDATION</span>
+        </h3>
+        <p class="text-gray-400 mb-6 max-w-md">
+          Advancing global equity through systemic change, education, and community empowerment since 2025.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#" class="w-10 h-10 rounded-full bg-[#181818] border border-[#252525] flex items-center justify-center text-gray-400 hover:text-[#1DA1F2] hover:border-[#1DA1F2] transition">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full bg-[#181818] border border-[#252525] flex items-center justify-center text-gray-400 hover:text-[#0A66C2] hover:border-[#0A66C2] transition">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full bg-[#181818] border border-[#252525] flex items-center justify-center text-gray-400 hover:text-[#E1306C] hover:border-[#E1306C] transition">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full bg-[#181818] border border-[#252525] flex items-center justify-center text-gray-400 hover:text-[#588157] hover:border-[#588157] transition">
+            <i class="fas fa-globe-americas"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Impact links -->
+      <div>
+        <h4 class="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-6">Our Impact</h4>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-400 hover:text-white transition hover:underline">Education</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition hover:underline">Women's Empowerment</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition hover:underline">Climate Action</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition hover:underline">Policy Reform</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition hover:underline">Annual Reports</a></li>
+        </ul>
+      </div>
+
+      <!-- Global network -->
+      <div>
+        <h4 class="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-6">Global Network</h4>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-400 hover:text-white transition hover:underline">Africa</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition hover:underline">Asia Pacific</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition hover:underline">Europe</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition hover:underline">Americas</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition hover:underline">Middle East</a></li>
+        </ul>
+      </div>
+
+      <!-- Get involved -->
+      <div>
+        <h4 class="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-6">Engage</h4>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-400 hover:text-white transition hover:underline">Careers</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition hover:underline">Volunteer</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition hover:underline">Partner With Us</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition hover:underline">Donate</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition hover:underline">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="bg-[#0a0a0a] border border-[#252525] rounded-xl p-8 mb-16 max-w-3xl ml-20">
+      <div class="md:flex items-center justify-between">
+        <div class="mb-6 md:mb-0">
+          <h4 class="text-xl font-bold mb-2">Join Our Global Briefing</h4>
+          <p class="text-gray-400">Monthly insights on equity progress worldwide</p>
+        </div>
+        <form class="flex">
+          <input 
+            type="email" 
+            placeholder="Your professional email" 
+            class="px-5 py-3 bg-[#181818] border border-[#252525] rounded-l-lg focus:border-[#588157] focus:ring-1 focus:ring-[#588157] outline-none w-full text-white"
+          >
+          <button class="bg-gradient-to-r from-[#588157] to-[#3a5a40] px-6 py-3 rounded-r-lg font-medium hover:shadow-lg hover:shadow-[#588157]/30 transition">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Legal/contact -->
+    <div class="border-t border-[#252525] pt-8 flex flex-col md:flex-row justify-between items-center ml-20">
+      <div class="text-gray-500 text-sm mb-4 md:mb-0">
+        © 2025 Feather Foundation. All rights reserved.
+      </div>
+      <div class="flex space-x-6">
+        <a href="#" class="text-gray-500 hover:text-gray-300 text-sm transition">Privacy Policy</a>
+        <a href="#" class="text-gray-500 hover:text-gray-300 text-sm transition">Terms of Service</a>
+        <a href="#" class="text-gray-500 hover:text-gray-300 text-sm transition">Contact</a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<script src="scripts.js"></script>
+</body>
+</html>
+
+  

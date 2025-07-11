@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .vision-card {
+    @apply flex items-start space-x-6 bg-[#181818] border border-[#252525] rounded-xl p-6 transition-all duration-500 hover:border-[#588157] hover:shadow-lg hover:shadow-[#588157]/10;
+  }
+  /* ... rest of your @apply rules ... */
+}
+.vision-card {
+    @apply flex items-start space-x-6 bg-[#181818] border border-[#252525] rounded-xl p-6 transition-all duration-500 hover:border-[#588157] hover:shadow-lg hover:shadow-[#588157]/10;
+  }
+
+  .card-icon {
+    @apply w-14 h-14 rounded-xl flex items-center justify-center text-xl mt-1 flex-shrink-0 transition-all duration-500 group-hover:scale-110;
+  }
+
+  .card-title {
+    @apply text-xl font-bold mb-2 text-white;
+  }
+
+  .card-text {
+    @apply text-gray-400 leading-relaxed;
+  }
+
+  /* Vision Image Container */
+  .vision-image-container {
+    @apply relative rounded-2xl overflow-hidden border border-[#252525];
+  }
+
+  .vision-image {
+    @apply w-full h-auto object-cover transition-transform duration-700;
+  }
+
+  .vision-image-container:hover .vision-image {
+    @apply scale-105;
+  }
+
+  .vision-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-8 flex flex-col justify-end;
+  }
+
+  /* Animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Counter Animation */
+  .count-up {
+    @apply transition-all duration-1000 ease-out;
+  }
